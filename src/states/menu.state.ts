@@ -1,9 +1,9 @@
 import * as Assets from '../assets'
 
 
-export class TitleState extends Phaser.State {
+export class MenuState extends Phaser.State {
 
-    static KEY: string = 'logo_state'
+    static KEY: string = 'menu_state'
 
     private logo: Phaser.Sprite
 
