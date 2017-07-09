@@ -21,7 +21,7 @@ Defined in package.json.
 
 Start webpack-dev-server with file watching enabled. Will wait 500ms for additional changes before compilation. Source maps included for debugging. Server configuration can be modified in webpack.config.js.
 
-### build:Dev
+### build:dev
 
 ```npm run build:dev```
 
@@ -33,6 +33,10 @@ Create a development build. Output to dist folder.
 - DevServer.ContentBase option may be required when bundling assets.
 
 ## TODO
+- Implement simple game template
+    - States -> Boot, Preloader, Menu, Play
+    - Enable and use Arcade Physics
+- Add WebFontLoader (& @types) and sample to load Google Fonts
 - Lint TypeScript
 - Production config
 - Minify
