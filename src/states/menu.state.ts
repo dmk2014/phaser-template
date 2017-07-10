@@ -9,6 +9,7 @@ export class MenuState extends Phaser.State {
 
     preload(): void {
         this.game.load.image(Assets.Images.Logo.Key, Assets.Images.Logo.GetPath())
+        this.game.load.audio(Assets.Audio.Menu.Key, [Assets.Audio.Menu.Format.MP3(), Assets.Audio.Menu.Format.OGG()])
     }
 
     create(): void {
@@ -26,6 +27,10 @@ export class MenuState extends Phaser.State {
         }
         let text: Phaser.Text = this.game.add.text(this.game.world.centerX, this.game.height - 60, 'Press space to play!', textStyle)
         text.anchor.setTo(0.5)
+
+        let audio: Phaser.Sound = this.game.add.audio(Assets.Audio.Menu.Key)
+        audio.loopFull()
+        audio.play()
 
         this.game.input.keyboard.addKeyCapture(Phaser.KeyCode.SPACEBAR)
         this.game.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR).onDown.addOnce(this.onSpacebarPress, this)
