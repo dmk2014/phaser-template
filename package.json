@@ -12,8 +12,8 @@
     "file-loader": "^0.11.2",
     "ts-loader": "^2.2.2",
     "typescript": "^2.4.1",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
     "phaser-ce": "^2.8.1"
