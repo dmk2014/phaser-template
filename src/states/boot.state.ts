@@ -6,6 +6,7 @@ export class BootState extends Phaser.State {
     static KEY: string = 'boot_state'
 
     create(): void {
+        this.game.stage.backgroundColor = '3498db'
         this.game.scale.pageAlignHorizontally = true
         this.game.scale.pageAlignVertically = true
 
