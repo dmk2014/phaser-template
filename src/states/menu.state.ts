@@ -7,11 +7,6 @@ export class MenuState extends Phaser.State {
 
     private logo: Phaser.Sprite
 
-    preload(): void {
-        this.game.load.image(Assets.Images.Logo.Key, Assets.Images.Logo.GetPath())
-        this.game.load.audio(Assets.Audio.Menu.Key, [Assets.Audio.Menu.Format.MP3(), Assets.Audio.Menu.Format.OGG()])
-    }
-
     create(): void {
         this.game.stage.backgroundColor = '3498db'
 

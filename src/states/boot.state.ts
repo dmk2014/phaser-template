@@ -1,4 +1,4 @@
-import { MenuState } from './menu.state'
+import { LoadState } from './load.state'
 
 
 export class BootState extends Phaser.State {
@@ -9,7 +9,7 @@ export class BootState extends Phaser.State {
         this.game.scale.pageAlignHorizontally = true
         this.game.scale.pageAlignVertically = true
 
-        this.game.state.start(MenuState.KEY)
+        this.game.state.start(LoadState.KEY)
     }
 
 }
