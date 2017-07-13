@@ -7,7 +7,7 @@ Exposes Phaser, PIXI and p2 as globals using expose-loader. These dependencies a
 
 TypeScript definitions for Phaser included in tsconfig.json.
 
-Assets are loaded using file-loader. Output to ```dist/assets/[hast].[ext]```.
+Assets loaded using file-loader. Output to ```dist/assets/[hast].[ext]```. Google Fonts added in the load state using webfontloader.
 
 Server and watcher for development provided with webpack-dev-server.
 
@@ -34,9 +34,8 @@ Create a development build. Output to dist folder.
 
 ## TODO
 - Implement simple game template
-    - States -> Boot, Preloader, Menu, Play
+    - Play State
     - Enable and use Arcade Physics
-- Add WebFontLoader (& @types) and sample to load Google Fonts
 - Lint TypeScript
 - Production config
 - Minify
