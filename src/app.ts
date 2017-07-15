@@ -7,8 +7,8 @@ import { Game } from './game'
 
 window.onload = () => {
     const config: Phaser.IGameConfig = {
-        width: 800,
-        height: 600,
+        width: 875,
+        height: 630,
         renderer: Phaser.AUTO
     }
 
