@@ -19,6 +19,11 @@ export namespace Images {
         GetPath: (): string => { return require('assets/logo.png') }
     }
 
+    export const Player: IImageAsset = {
+        Key: "player",
+        GetPath: (): string => { return require('assets/player.png') }
+    }
+
 }
 
 export namespace Audio {
@@ -28,6 +33,46 @@ export namespace Audio {
         Format: {
             MP3: () => { return require('assets/menu.mp3') },
             OGG: () => { return require('assets/menu.ogg') }
+        }
+    }
+
+}
+
+export namespace Tilemaps {
+
+    export const Level = {
+        Key: 'level',
+        GetPath: () => { return require('assets/level.json') },
+        Layers: {
+            Sky: {
+                Name: 'Sky'
+            },
+            Clouds: {
+                Name: 'Clouds'
+            },
+            Background: {
+                Name: 'Background'
+            },
+            Tiles: {
+                Name: 'Tiles'
+            }
+        },
+        Tilesets: {
+            Spritesheet: {
+                Key: 'level_spritesheet',
+                Name: 'spritesheet',
+                GetPath: () => { return require('assets/spritesheet.png') }
+            },
+            Clouds: {
+                Key: 'level_clouds',
+                Name: 'clouds',
+                GetPath: () => { return require('assets/clouds.png') }
+            },
+            Sky: {
+                Key: 'level_sky',
+                Name: 'bg',
+                GetPath: () => { return require('assets/bg.png') }
+            }
         }
     }
 

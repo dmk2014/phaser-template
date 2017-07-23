@@ -1,4 +1,5 @@
 import * as Assets from '../assets'
+import { PlayState } from './play.state'
 
 
 export class MenuState extends Phaser.State {
@@ -7,6 +8,7 @@ export class MenuState extends Phaser.State {
 
     private logo: Phaser.Sprite
     private playText: Phaser.Text
+    private backgroundAudio: Phaser.Sound
 
     create(): void {
         this.logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 50, Assets.Images.Logo.Key)
@@ -22,10 +24,10 @@ export class MenuState extends Phaser.State {
         this.playText = this.game.add.text(this.game.world.centerX, this.game.height - 60, 'Press space to play!', textStyle)
         this.playText.anchor.setTo(0.5)
 
-        let audio: Phaser.Sound = this.game.add.audio(Assets.Audio.Menu.Key)
-        audio.fadeIn(Phaser.Timer.SECOND)
-        audio.loopFull()
-        audio.play()
+        this.backgroundAudio = this.game.add.audio(Assets.Audio.Menu.Key)
+        this.backgroundAudio.fadeIn(Phaser.Timer.SECOND)
+        this.backgroundAudio.loopFull()
+        this.backgroundAudio.play()
 
         this.game.input.keyboard.addKeyCapture(Phaser.KeyCode.SPACEBAR)
         this.game.input.keyboard.addKey(Phaser.KeyCode.SPACEBAR).onDown.addOnce(this.onSpacebarPress, this)
@@ -36,9 +38,8 @@ export class MenuState extends Phaser.State {
     }
 
     onSpacebarPress(): void {
-        // TODO
-        console.log('Starting the game...')
-        this.playText.text = 'Gameplay example coming soon!'
+        this.backgroundAudio.stop()
+        this.game.state.start(PlayState.KEY)
     }
 
 }

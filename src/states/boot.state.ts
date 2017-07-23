@@ -10,6 +10,8 @@ export class BootState extends Phaser.State {
         this.game.scale.pageAlignHorizontally = true
         this.game.scale.pageAlignVertically = true
 
+        this.game.physics.startSystem(Phaser.Physics.ARCADE)
+
         this.game.state.start(LoadState.KEY)
     }
 

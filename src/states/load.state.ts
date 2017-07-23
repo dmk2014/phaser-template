@@ -17,7 +17,13 @@ export class LoadState extends Phaser.State {
         text.anchor.setTo(0.5)
 
         this.game.load.image(Assets.Images.Logo.Key, Assets.Images.Logo.GetPath())
+        this.game.load.image(Assets.Images.Player.Key, Assets.Images.Player.GetPath())
         this.game.load.audio(Assets.Audio.Menu.Key, [Assets.Audio.Menu.Format.MP3(), Assets.Audio.Menu.Format.OGG()])
+
+        this.game.load.tilemap(Assets.Tilemaps.Level.Key, Assets.Tilemaps.Level.GetPath(), null, Phaser.Tilemap.TILED_JSON)
+        this.game.load.image(Assets.Tilemaps.Level.Tilesets.Clouds.Key, Assets.Tilemaps.Level.Tilesets.Clouds.GetPath())
+        this.game.load.image(Assets.Tilemaps.Level.Tilesets.Sky.Key, Assets.Tilemaps.Level.Tilesets.Sky.GetPath())
+        this.game.load.image(Assets.Tilemaps.Level.Tilesets.Spritesheet.Key, Assets.Tilemaps.Level.Tilesets.Spritesheet.GetPath())
 
         // TODO: Handle situation where font loading fails?
         WebFont.load({
