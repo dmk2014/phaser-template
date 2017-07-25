@@ -17,7 +17,7 @@ export class LoadState extends Phaser.State {
         text.anchor.setTo(0.5)
 
         this.game.load.image(Assets.Images.Logo.Key, Assets.Images.Logo.GetPath())
-        this.game.load.image(Assets.Images.Player.Key, Assets.Images.Player.GetPath())
+        this.game.load.spritesheet(Assets.Images.Player.Key, Assets.Images.Player.GetPath(), 31, 42)
         this.game.load.audio(Assets.Audio.Menu.Key, [Assets.Audio.Menu.Format.MP3(), Assets.Audio.Menu.Format.OGG()])
 
         this.game.load.tilemap(Assets.Tilemaps.Level.Key, Assets.Tilemaps.Level.GetPath(), null, Phaser.Tilemap.TILED_JSON)
