@@ -1,0 +1,4 @@
+# Fix issue where some assets files (.tps) are detected as PLSQL!
+
+# Prevent Linguist from using assets to detect repo languages on GitHub
+assets_dev/* linguist-vendored
