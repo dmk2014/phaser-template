@@ -14,6 +14,11 @@ interface IAudioAsset {
 
 export namespace Images {
 
+    export const MenuBackground: IImageAsset = {
+        Key: "menu_bg",
+        GetPath: (): string => { return require('assets/menu_bg.png') }
+    }
+
     export const Logo: IImageAsset = {
         Key: "logo",
         GetPath: (): string => { return require('assets/logo.png') }

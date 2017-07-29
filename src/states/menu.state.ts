@@ -11,6 +11,8 @@ export class MenuState extends Phaser.State {
     private backgroundAudio: Phaser.Sound
 
     create(): void {
+        this.game.add.image(0, 0, Assets.Images.MenuBackground.Key)
+
         this.logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 50, Assets.Images.Logo.Key)
         this.logo.anchor.setTo(0.5, 0.5)
         this.logo.scale.setTo(0)
@@ -18,8 +20,11 @@ export class MenuState extends Phaser.State {
 
         let textStyle: Phaser.PhaserTextStyle = {
             font: 'VT323',
-            fontSize: 35,
-            fill: '#FFFFFF'
+            fontSize: 40,
+            fill: '#FFFFFF',
+            align: 'center',
+            stroke: '#000000',
+            strokeThickness: 4
         }
         this.playText = this.game.add.text(this.game.world.centerX, this.game.height - 60, 'Press space to play!', textStyle)
         this.playText.anchor.setTo(0.5)

@@ -16,6 +16,7 @@ export class LoadState extends Phaser.State {
         let text: Phaser.Text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, 'loading...', textStyle)
         text.anchor.setTo(0.5)
 
+        this.game.load.image(Assets.Images.MenuBackground.Key, Assets.Images.MenuBackground.GetPath())
         this.game.load.image(Assets.Images.Logo.Key, Assets.Images.Logo.GetPath())
         this.game.load.spritesheet(Assets.Images.Player.Key, Assets.Images.Player.GetPath(), 31, 42)
         this.game.load.audio(Assets.Audio.Menu.Key, [Assets.Audio.Menu.Format.MP3(), Assets.Audio.Menu.Format.OGG()])
