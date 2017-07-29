@@ -55,6 +55,9 @@ export namespace Tilemaps {
             },
             Tiles: {
                 Name: 'Tiles'
+            },
+            Water: {
+                Name: 'Water'
             }
         },
         Tilesets: {

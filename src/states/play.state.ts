@@ -9,6 +9,7 @@ export class PlayState extends Phaser.State {
     private player: Phaser.Sprite
     private playerBody: Phaser.Physics.Arcade.Body
     private wallsLayer: Phaser.TilemapLayer
+    private waterLayer: Phaser.TilemapLayer
     private cursors: Phaser.CursorKeys
 
     private animations = {
@@ -24,11 +25,12 @@ export class PlayState extends Phaser.State {
         map.createLayer(Assets.Tilemaps.Level.Layers.Sky.Name)
         map.createLayer(Assets.Tilemaps.Level.Layers.Clouds.Name)
         map.createLayer(Assets.Tilemaps.Level.Layers.Background.Name)
+        this.waterLayer = map.createLayer(Assets.Tilemaps.Level.Layers.Water.Name)
         this.wallsLayer = map.createLayer(Assets.Tilemaps.Level.Layers.Tiles.Name)
         this.wallsLayer.resizeWorld()
 
-        // TODO: Water Tiles -> seperate layer?
-        map.setCollision([64, 71, 72, 73, 74, 79, 74, 75, 76, 86, 88], true, this.wallsLayer)
+        map.setCollision([86], true, this.waterLayer)
+        map.setCollision([64, 66, 68, 77, 79], true, this.wallsLayer)
 
         this.player = this.game.add.sprite(40, 190, Assets.Images.Player.Key, 1)
         this.player.animations.add(this.animations.WalkLeft, [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 25, true)
@@ -51,6 +53,7 @@ export class PlayState extends Phaser.State {
             this.onGameOver()
         }
 
+        this.game.physics.arcade.collide(this.player, this.waterLayer, this.onGameOver, null, this)
         this.game.physics.arcade.collide(this.player, this.wallsLayer)
 
         this.setPlayerVelocity()
@@ -61,10 +64,10 @@ export class PlayState extends Phaser.State {
         if (this.cursors.up.isDown && this.playerBody.onFloor()) {
             this.playerBody.velocity.y = -370
         } else if (this.cursors.left.isDown) {
-            this.playerBody.velocity.x = -200
+            this.playerBody.velocity.x = -220
             this.player.animations.play(this.animations.WalkLeft)
         } else if (this.cursors.right.isDown) {
-            this.playerBody.velocity.x = 200
+            this.playerBody.velocity.x = 220
         } else {
             this.playerBody.velocity.x = 0
         }
@@ -85,8 +88,17 @@ export class PlayState extends Phaser.State {
     onGameOver(): void {
         this.player.kill()
 
-        // TODO: Nice text!
-        this.game.add.text(50, 50, 'Game Over!\nPress Space to return to Menu')
+        let textStyle: Phaser.PhaserTextStyle = {
+            font: 'VT323',
+            fontSize: 40,
+            fill: '#FFFFFF',
+            align: 'center',
+            stroke: '#000000',
+            strokeThickness: 4
+        }
+        let text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, 'Game Over!\nPress Space to return to Menu', textStyle)
+        text.anchor.setTo(0.5)
+
         this.game.input.keyboard.
             addKey(Phaser.KeyCode.SPACEBAR).
             onDown.
