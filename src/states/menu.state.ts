@@ -6,14 +6,14 @@ export class MenuState extends Phaser.State {
 
     static KEY: string = 'menu_state'
 
-    private logo: Phaser.Sprite
+    private logo: Phaser.Image
     private playText: Phaser.Text
     private backgroundAudio: Phaser.Sound
 
     create(): void {
         this.game.add.image(0, 0, Assets.Images.MenuBackground.Key)
 
-        this.logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - 50, Assets.Images.Logo.Key)
+        this.logo = this.game.add.image(this.game.world.centerX, this.game.world.centerY - 50, Assets.Images.Logo.Key)
         this.logo.anchor.setTo(0.5, 0.5)
         this.logo.scale.setTo(0)
         this.game.add.tween(this.logo.scale).to({ x: 1, y: 1 }, 1500).start()
