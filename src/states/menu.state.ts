@@ -11,7 +11,7 @@ export class MenuState extends Phaser.State {
     private backgroundAudio: Phaser.Sound
 
     create(): void {
-        this.game.add.image(0, 0, Assets.Images.MenuBackground.Key)
+        this.game.add.image(0, 23, Assets.Images.MenuBackground.Key)
 
         this.logo = this.game.add.image(this.game.world.centerX, this.game.world.centerY - 50, Assets.Images.Logo.Key)
         this.logo.anchor.setTo(0.5, 0.5)

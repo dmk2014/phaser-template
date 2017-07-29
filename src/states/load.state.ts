@@ -11,7 +11,9 @@ export class LoadState extends Phaser.State {
         let textStyle: Phaser.PhaserTextStyle = {
             font: 'Courier New',
             fill: '#FFFFFF',
-            fontSize: 35
+            fontSize: 40,
+            stroke: '#000000',
+            strokeThickness: 3.5
         }
         let text: Phaser.Text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, 'loading...', textStyle)
         text.anchor.setTo(0.5)
