@@ -1,15 +1,17 @@
 # Personal Template for Phaser CE
 
 ## Description
-Phaser template for TypeScript. Inspired by a number of similar projects. Tested only on macOS, but no issues anticipated on Windows or Linux.
+[Phaser](https://github.com/photonstorm/phaser) template for TypeScript. Inspired by a number of similar projects. Tested only on macOS, but no issues anticipated on Windows or Linux.
 
-Exposes Phaser, PIXI and p2 as globals using expose-loader. These dependencies are imported once for the entire application in app.ts. Webpack will then make them available globally.
+Includes Phaser, PIXI and p2 as globals using expose-loader. These dependencies are imported once for the entire application in app.ts. Webpack will expose them globally at runtime.
 
 TypeScript definitions for Phaser included in tsconfig.json.
 
 Assets loaded using file-loader. Output to ```dist/assets/[hast].[ext]```. Google Fonts added in the load state using webfontloader.
 
 Server and watcher for development provided with webpack-dev-server.
+
+Implements a full working sample of the Phaser state system (Boot, Load, Menu and Play) as well as demonstrating Phaser concepts such as sprites, tilemaps, arcade physics and more.
 
 ## Scripts
 
@@ -29,18 +31,14 @@ Create a development build. Output to dist folder.
 
 ## Notes
 - Including PhaserCE Typescript Definitions - https://github.com/photonstorm/phaser-ce/issues/16
-
 - DevServer.ContentBase option may be required when bundling assets.
 
 ## TODO
-- Implement simple game template
-    - Play State
-    - Enable and use Arcade Physics
+- Cleanup textures (remove unused)
 - Lint TypeScript
 - Production config
 - Minify
 - Clean step before build
 - Assets
-    - Support additional file formats
     - Consider maintaining directory structure
     - Consider including filename in output
