@@ -96,7 +96,7 @@ export class PlayState extends Phaser.State {
             stroke: '#000000',
             strokeThickness: 4
         }
-        let text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, 'Game Over!\nPress Space to return to Menu', textStyle)
+        let text = this.game.add.text(this.game.world.centerX, this.game.world.centerY, 'Game Over!\nPress space to return to Menu', textStyle)
         text.anchor.setTo(0.5)
 
         this.game.input.keyboard.
