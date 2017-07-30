@@ -29,8 +29,8 @@ export class PlayState extends Phaser.State {
         this.wallsLayer = map.createLayer(Assets.Tilemaps.Level.Layers.Tiles.Name)
         this.wallsLayer.resizeWorld()
 
-        map.setCollision([86], true, this.waterLayer)
-        map.setCollision([64, 66, 68, 77, 79], true, this.wallsLayer)
+        map.setCollision([13], true, this.waterLayer)
+        map.setCollision([9, 10, 11, 12], true, this.wallsLayer)
 
         this.player = this.game.add.sprite(40, 190, Assets.Images.Player.Key, 1)
         this.player.animations.add(this.animations.WalkLeft, [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 25, true)
@@ -45,7 +45,6 @@ export class PlayState extends Phaser.State {
     }
 
     update(): void {
-        // TODO: Kill Player on water collission.
         if (!this.player.alive) {
             return
         }

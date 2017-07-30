@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.4.0</string>
         <key>fileName</key>
-        <string>/Users/darren/Desktop/phaser-template/assets_dev/player.tps</string>
+        <string>/Users/darren/Desktop/phaser-template/assets_dev/spritesheet.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>spritesheet-only</string>
         <key>textureFileName</key>
-        <filename>../assets/player_.png</filename>
+        <filename>../assets/spritesheet.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -193,71 +193,75 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">player/front.png</key>
-            <key type="filename">player/jump_left.png</key>
-            <key type="filename">player/jump_right.png</key>
-            <key type="filename">player/left01.png</key>
-            <key type="filename">player/left02.png</key>
-            <key type="filename">player/left03.png</key>
-            <key type="filename">player/left04.png</key>
-            <key type="filename">player/left05.png</key>
-            <key type="filename">player/left06.png</key>
-            <key type="filename">player/left07.png</key>
-            <key type="filename">player/left08.png</key>
-            <key type="filename">player/left09.png</key>
-            <key type="filename">player/left10.png</key>
-            <key type="filename">player/left11.png</key>
-            <key type="filename">player/right01.png</key>
-            <key type="filename">player/right02.png</key>
-            <key type="filename">player/right03.png</key>
-            <key type="filename">player/right04.png</key>
-            <key type="filename">player/right05.png</key>
-            <key type="filename">player/right06.png</key>
-            <key type="filename">player/right07.png</key>
-            <key type="filename">player/right08.png</key>
-            <key type="filename">player/right09.png</key>
-            <key type="filename">player/right10.png</key>
-            <key type="filename">player/right11.png</key>
+            <key type="filename">spritesheet/bush.png</key>
+            <key type="filename">spritesheet/cactus.png</key>
+            <key type="filename">spritesheet/coinGold.png</key>
+            <key type="filename">spritesheet/fence.png</key>
+            <key type="filename">spritesheet/fenceBroken.png</key>
+            <key type="filename">spritesheet/grassCenter.png</key>
+            <key type="filename">spritesheet/grassCliffLeft.png</key>
+            <key type="filename">spritesheet/grassCliffRight.png</key>
+            <key type="filename">spritesheet/grassMid.png</key>
+            <key type="filename">spritesheet/liquidWater.png</key>
+            <key type="filename">spritesheet/liquidWaterTop_mid.png</key>
+            <key type="filename">spritesheet/mushroomBrown.png</key>
+            <key type="filename">spritesheet/mushroomRed.png</key>
+            <key type="filename">spritesheet/pineSapling.png</key>
+            <key type="filename">spritesheet/pineSaplingAlt.png</key>
+            <key type="filename">spritesheet/plant.png</key>
+            <key type="filename">spritesheet/rock.png</key>
+            <key type="filename">spritesheet/signRight.png</key>
+            <key type="filename">spritesheet/tree.png</key>
+            <key type="filename">spritesheet/treeBranchesLeft.png</key>
+            <key type="filename">spritesheet/treeBranchesLeftAlt.png</key>
+            <key type="filename">spritesheet/treeBranchesRight.png</key>
+            <key type="filename">spritesheet/treeBranchesSnowRightAlt.png</key>
+            <key type="filename">spritesheet/treeTop.png</key>
+            <key type="filename">spritesheet/treeTrunk.png</key>
+            <key type="filename">spritesheet/treeTrunkBottom.png</key>
+            <key type="filename">spritesheet/treeTrunkBottomAlt.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>8,11,16,21</rect>
+                <rect>9,9,18,18</rect>
                 <key>scale9Paddings</key>
-                <rect>8,11,16,21</rect>
+                <rect>9,9,18,18</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>player/front.png</filename>
-            <filename>player/jump_left.png</filename>
-            <filename>player/jump_right.png</filename>
-            <filename>player/left01.png</filename>
-            <filename>player/left02.png</filename>
-            <filename>player/left03.png</filename>
-            <filename>player/left04.png</filename>
-            <filename>player/left05.png</filename>
-            <filename>player/left06.png</filename>
-            <filename>player/left07.png</filename>
-            <filename>player/left08.png</filename>
-            <filename>player/left09.png</filename>
-            <filename>player/left10.png</filename>
-            <filename>player/left11.png</filename>
-            <filename>player/right01.png</filename>
-            <filename>player/right02.png</filename>
-            <filename>player/right03.png</filename>
-            <filename>player/right04.png</filename>
-            <filename>player/right05.png</filename>
-            <filename>player/right06.png</filename>
-            <filename>player/right07.png</filename>
-            <filename>player/right08.png</filename>
-            <filename>player/right09.png</filename>
-            <filename>player/right10.png</filename>
-            <filename>player/right11.png</filename>
+            <filename>spritesheet/bush.png</filename>
+            <filename>spritesheet/cactus.png</filename>
+            <filename>spritesheet/coinGold.png</filename>
+            <filename>spritesheet/fence.png</filename>
+            <filename>spritesheet/fenceBroken.png</filename>
+            <filename>spritesheet/grassCenter.png</filename>
+            <filename>spritesheet/grassCliffLeft.png</filename>
+            <filename>spritesheet/grassCliffRight.png</filename>
+            <filename>spritesheet/grassMid.png</filename>
+            <filename>spritesheet/liquidWater.png</filename>
+            <filename>spritesheet/liquidWaterTop_mid.png</filename>
+            <filename>spritesheet/mushroomBrown.png</filename>
+            <filename>spritesheet/mushroomRed.png</filename>
+            <filename>spritesheet/pineSapling.png</filename>
+            <filename>spritesheet/pineSaplingAlt.png</filename>
+            <filename>spritesheet/plant.png</filename>
+            <filename>spritesheet/rock.png</filename>
+            <filename>spritesheet/signRight.png</filename>
+            <filename>spritesheet/tree.png</filename>
+            <filename>spritesheet/treeBranchesLeft.png</filename>
+            <filename>spritesheet/treeBranchesLeftAlt.png</filename>
+            <filename>spritesheet/treeBranchesRight.png</filename>
+            <filename>spritesheet/treeBranchesSnowRightAlt.png</filename>
+            <filename>spritesheet/treeTop.png</filename>
+            <filename>spritesheet/treeTrunk.png</filename>
+            <filename>spritesheet/treeTrunkBottom.png</filename>
+            <filename>spritesheet/treeTrunkBottomAlt.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

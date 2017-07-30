@@ -78,8 +78,8 @@ export namespace Tilemaps {
             },
             Sky: {
                 Key: 'level_sky',
-                Name: 'bg',
-                GetPath: () => { return require('assets/bg.png') }
+                Name: 'sky',
+                GetPath: () => { return require('assets/sky.png') }
             }
         }
     }

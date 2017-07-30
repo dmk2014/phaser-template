@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>4.4.0</string>
         <key>fileName</key>
-        <string>/Users/darren/Desktop/phaser-template/assets_dev/player.tps</string>
+        <string>/Users/darren/Desktop/phaser-template/assets_dev/clouds.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -36,7 +36,7 @@
         <key>dataFormat</key>
         <string>spritesheet-only</string>
         <key>textureFileName</key>
-        <filename>../assets/player_.png</filename>
+        <filename></filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -90,9 +90,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>512</int>
+            <int>2048</int>
             <key>height</key>
-            <int>512</int>
+            <int>2048</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -193,71 +193,27 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">player/front.png</key>
-            <key type="filename">player/jump_left.png</key>
-            <key type="filename">player/jump_right.png</key>
-            <key type="filename">player/left01.png</key>
-            <key type="filename">player/left02.png</key>
-            <key type="filename">player/left03.png</key>
-            <key type="filename">player/left04.png</key>
-            <key type="filename">player/left05.png</key>
-            <key type="filename">player/left06.png</key>
-            <key type="filename">player/left07.png</key>
-            <key type="filename">player/left08.png</key>
-            <key type="filename">player/left09.png</key>
-            <key type="filename">player/left10.png</key>
-            <key type="filename">player/left11.png</key>
-            <key type="filename">player/right01.png</key>
-            <key type="filename">player/right02.png</key>
-            <key type="filename">player/right03.png</key>
-            <key type="filename">player/right04.png</key>
-            <key type="filename">player/right05.png</key>
-            <key type="filename">player/right06.png</key>
-            <key type="filename">player/right07.png</key>
-            <key type="filename">player/right08.png</key>
-            <key type="filename">player/right09.png</key>
-            <key type="filename">player/right10.png</key>
-            <key type="filename">player/right11.png</key>
+            <key type="filename">clouds/cloud1.png</key>
+            <key type="filename">clouds/cloud2.png</key>
+            <key type="filename">clouds/cloud3.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
-                <rect>8,11,16,21</rect>
+                <rect>26,15,53,29</rect>
                 <key>scale9Paddings</key>
-                <rect>8,11,16,21</rect>
+                <rect>26,15,53,29</rect>
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>player/front.png</filename>
-            <filename>player/jump_left.png</filename>
-            <filename>player/jump_right.png</filename>
-            <filename>player/left01.png</filename>
-            <filename>player/left02.png</filename>
-            <filename>player/left03.png</filename>
-            <filename>player/left04.png</filename>
-            <filename>player/left05.png</filename>
-            <filename>player/left06.png</filename>
-            <filename>player/left07.png</filename>
-            <filename>player/left08.png</filename>
-            <filename>player/left09.png</filename>
-            <filename>player/left10.png</filename>
-            <filename>player/left11.png</filename>
-            <filename>player/right01.png</filename>
-            <filename>player/right02.png</filename>
-            <filename>player/right03.png</filename>
-            <filename>player/right04.png</filename>
-            <filename>player/right05.png</filename>
-            <filename>player/right06.png</filename>
-            <filename>player/right07.png</filename>
-            <filename>player/right08.png</filename>
-            <filename>player/right09.png</filename>
-            <filename>player/right10.png</filename>
-            <filename>player/right11.png</filename>
+            <filename>clouds/cloud1.png</filename>
+            <filename>clouds/cloud2.png</filename>
+            <filename>clouds/cloud3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
