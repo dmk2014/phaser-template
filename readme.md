@@ -31,12 +31,16 @@ Start webpack-dev-server with file watching enabled. Will wait 500ms for additio
 
 Create a development build. Output to dist folder.
 
+## Credits
+- Sample level created using [Tiled](http://www.mapeditor.org). Spritesheets created with [TexturePacker](https://www.codeandweb.com/texturepacker).
+- Textures from [Platformer Art Complete Pack](https://opengameart.org/content/platformer-art-complete-pack-often-updated).
+- Menu audio created by [mrpoly](https://opengameart.org/content/menu-music).
+
 ## Notes
-- Including PhaserCE Typescript Definitions - https://github.com/photonstorm/phaser-ce/issues/16
+- Including PhaserCE Typescript Definitions - https://github.com/photonstorm/phaser-ce/issues/16.
 - DevServer.ContentBase option may be required when bundling assets.
 
 ## TODO
-- Cleanup textures (remove unused)
 - Lint TypeScript
 - Production config
 - Minify
@@ -44,3 +48,6 @@ Create a development build. Output to dist folder.
 - Assets
     - Consider maintaining directory structure
     - Consider including filename in output
+- Level
+    - Add coins & HUD.
+    - Additional sounds.
