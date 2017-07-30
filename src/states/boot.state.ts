@@ -7,8 +7,11 @@ export class BootState extends Phaser.State {
 
     create(): void {
         this.game.stage.backgroundColor = 'd6f3f6'
+        
         this.game.scale.pageAlignHorizontally = true
         this.game.scale.pageAlignVertically = true
+
+        this.game.renderer.renderSession.roundPixels = true
 
         this.game.physics.startSystem(Phaser.Physics.ARCADE)
 
