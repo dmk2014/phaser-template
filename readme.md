@@ -1,3 +1,5 @@
+[![Dependencies](https://david-dm.org/dmk2014/phaser-template.svg)](https://david-dm.org/dmk2014/phaser-template)
+
 # Personal Template for Phaser CE
 
 ## Description
