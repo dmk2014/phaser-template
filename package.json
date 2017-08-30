@@ -7,17 +7,17 @@
   },
   "author": "dmk2014",
   "devDependencies": {
-    "@types/node": "^8.0.19",
-    "@types/webfontloader": "^1.6.28",
+    "@types/node": "^8.0.26",
+    "@types/webfontloader": "^1.6.29",
     "expose-loader": "^0.7.3",
     "file-loader": "^0.11.2",
-    "ts-loader": "^2.3.2",
-    "typescript": "^2.4.2",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.5.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "phaser-ce": "^2.8.3",
+    "phaser-ce": "^2.8.4",
     "webfontloader": "^1.6.28"
   }
 }
