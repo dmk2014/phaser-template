@@ -1,0 +1,16 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "cyclomatic-complexity": [
+            true, 15
+        ],
+        "member-access": [
+            "no-public"
+        ]
+    },
+    "rulesDirectory": []
+}
