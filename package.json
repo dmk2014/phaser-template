@@ -2,9 +2,9 @@
   "name": "phaser-template",
   "version": "0.0.1",
   "scripts": {
-    "serve": "webpack-dev-server --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js",
-    "lint": "tslint --project tsconfig.json --force"
+    "lint": "tslint --project tsconfig.json --force",
+    "serve": "webpack-dev-server --config webpack.config.js"
   },
   "author": "dmk2014",
   "devDependencies": {
