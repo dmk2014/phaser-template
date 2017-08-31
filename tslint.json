@@ -6,10 +6,27 @@
     "jsRules": {},
     "rules": {
         "cyclomatic-complexity": [
-            true, 15
+            true,
+            15
         ],
         "member-access": [
             "no-public"
+        ],
+        "object-literal-sort-keys": [
+            false
+        ],
+        "trailing-comma": [
+            true,
+            {
+                "multiline": {
+                    "arrays": "always",
+                    "objects": "always",
+                    "functions": "never",
+                    "typeLiterals": "never",
+                    "imports": "never",
+                    "exports": "never"
+                }
+            }
         ]
     },
     "rulesDirectory": []
