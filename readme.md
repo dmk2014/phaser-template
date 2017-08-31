@@ -19,17 +19,23 @@ Implements a full working sample of the Phaser state system (Boot, Load, Menu an
 
 Defined in package.json.
 
-### serve
-
-```npm run serve```
-
-Start webpack-dev-server with file watching enabled. Will wait 500ms for additional changes before compilation. Source maps included for debugging. Server configuration can be modified in webpack.config.js.
-
 ### build:dev
 
 ```npm run build:dev```
 
 Create a development build. Output to dist folder.
+
+### lint
+
+```npm run lint```
+
+Run TSLint on the TypeScript source files. The recommended ruleset is used, along with some custom rules as defined in tslint.json. These rules are a personal preference. For VSCode users, the [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint) plugin is recommended.
+
+### serve
+
+```npm run serve```
+
+Start webpack-dev-server with file watching enabled. Will wait 500ms for additional changes before compilation. Source maps included for debugging. Server configuration can be modified in webpack.config.js.
 
 ## Credits
 - Sample level created using [Tiled](http://www.mapeditor.org). Spritesheets created with [TexturePacker](https://www.codeandweb.com/texturepacker).
@@ -41,7 +47,6 @@ Create a development build. Output to dist folder.
 - DevServer.ContentBase option may be required when bundling assets.
 
 ## TODO
-- Lint TypeScript
 - Production config
 - Minify
 - Clean step before build
