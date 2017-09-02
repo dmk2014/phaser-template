@@ -9,7 +9,7 @@ Includes Phaser, PIXI and p2 as globals using expose-loader. These dependencies 
 
 TypeScript definitions for Phaser included in tsconfig.json.
 
-Assets loaded using file-loader. Output to ```dist/assets/[hast].[ext]```. Google Fonts added in the load state using webfontloader.
+Assets loaded using file-loader. Google Fonts added in the load state using webfontloader.
 
 Server and watcher for development provided with webpack-dev-server.
 
