@@ -1,11 +1,8 @@
 const path = require('path')
-const webpack = require('webpack')
-const cleanPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/app.ts'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     resolve: {
@@ -41,19 +38,5 @@ module.exports = {
                 loader: 'file-loader?name=assets/[name].[ext]?[hash]'
             }
         ]
-    },
-    plugins: [
-        new cleanPlugin(['dist'])
-    ],
-    devtool: 'inline-source-map',
-    devServer: {
-        compress: true,
-        port: 8080,
-        watchOptions: {
-            aggregateTimeout: 500,
-            ignored: /node_modules/,
-            inline: true,
-            poll: false
-        }
     }
 }

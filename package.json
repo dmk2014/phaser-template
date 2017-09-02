@@ -2,9 +2,12 @@
   "name": "phaser-template",
   "version": "0.0.1",
   "scripts": {
-    "build:dev": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
     "lint": "tslint --project tsconfig.json --force",
-    "serve": "webpack-dev-server --config webpack.config.js"
+    "serve": "webpack-dev-server --config webpack.dev.js",
+    "serve:dev": "npm run serve",
+    "serve:prod": "webpack-dev-server --config webpack.prod.js"
   },
   "author": "dmk2014",
   "devDependencies": {
@@ -17,7 +20,8 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.1",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "phaser-ce": "^2.8.4",
