@@ -1,6 +1,6 @@
 [![Dependencies](https://david-dm.org/dmk2014/phaser-template.svg)](https://david-dm.org/dmk2014/phaser-template)
 
-# Personal Template for Phaser CE
+# TypeScript Template for Phaser CE
 
 ## Description
 [Phaser](https://github.com/photonstorm/phaser) template for TypeScript. Inspired by a number of similar projects. Tested only on macOS, but no issues anticipated on Windows or Linux.
@@ -17,13 +17,17 @@ Implements a full working sample of the Phaser state system (Boot, Load, Menu an
 
 ## Scripts
 
-Defined in package.json.
-
 ### build:dev
 
 ```npm run build:dev```
 
-Create a development build. Output to dist folder.
+Create a development build. Output to build folder.
+
+### build:prod
+
+```npm run build:prod```
+
+Create a production build. Output to dist folder.
 
 ### lint
 
@@ -35,7 +39,19 @@ Run TSLint on the TypeScript source files. The recommended ruleset is used, alon
 
 ```npm run serve```
 
-Start webpack-dev-server with file watching enabled. Will wait 500ms for additional changes before compilation. Source maps included for debugging. Server configuration can be modified in webpack.config.js.
+Start webpack-dev-server with file watching enabled. Will wait 500ms for additional changes before compilation. Source maps included for debugging. Server configuration can be modified in webpack.dev.js.
+
+### serve:dev
+
+```npm run serve:dev```
+
+Alias for serve.
+
+### serve:prod
+
+```npm run serve:prod```
+
+Start webpack-dev-server using production configuration.
 
 ## Credits
 - Sample level created using [Tiled](http://www.mapeditor.org). Spritesheets created with [TexturePacker](https://www.codeandweb.com/texturepacker).
@@ -44,15 +60,10 @@ Start webpack-dev-server with file watching enabled. Will wait 500ms for additio
 
 ## Notes
 - Including PhaserCE Typescript Definitions - https://github.com/photonstorm/phaser-ce/issues/16.
-- DevServer.ContentBase option may be required when bundling assets.
 
 ## TODO
-- Production config
-- Minify
-- Clean step before build
 - Assets
-    - Consider maintaining directory structure
-    - Consider including filename in output
+    - Maintain directory structure?
 - Level
     - Add coins & HUD.
     - Additional sounds.
