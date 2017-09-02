@@ -1,5 +1,6 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const cleanPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: path.resolve(__dirname, 'src/app.ts'),
@@ -37,10 +38,13 @@ module.exports = {
             },
             {
                 test: /\.(jpg|jpeg|png|mp3|ogg|json)$/,
-                loader: 'file-loader?name=assets/[hash].[ext]'
+                loader: 'file-loader?name=assets/[name].[ext]?[hash]'
             }
         ]
     },
+    plugins: [
+        new cleanPlugin(['dist'])
+    ],
     devtool: 'inline-source-map',
     devServer: {
         compress: true,
