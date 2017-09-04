@@ -1,6 +1,6 @@
 {
   "name": "phaser-template",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
