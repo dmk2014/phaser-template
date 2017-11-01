@@ -11,17 +11,17 @@
   },
   "author": "dmk2014",
   "devDependencies": {
-    "@types/node": "^8.0.46",
+    "@types/node": "^8.0.47",
     "@types/webfontloader": "^1.6.29",
     "clean-webpack-plugin": "^0.1.17",
     "expose-loader": "^0.7.3",
     "file-loader": "^0.11.2",
     "ts-loader": "^2.3.7",
     "tslint": "^5.8.0",
-    "typescript": "^2.5.3",
+    "typescript": "^2.6.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.1"
   },
   "dependencies": {
     "phaser-ce": "^2.9.1",
