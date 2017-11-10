@@ -17,7 +17,7 @@ export class PlayState extends Phaser.State {
     };
 
     create(): void {
-        const map: Phaser.Tilemap = this.game.add.tilemap(Tilemaps.Level.Key);
+        const map: Phaser.Tilemap = this.add.tilemap(Tilemaps.Level.Key);
         map.addTilesetImage(Tilemaps.Level.Tilesets.Clouds.Name, Tilemaps.Level.Tilesets.Clouds.Key);
         map.addTilesetImage(Tilemaps.Level.Tilesets.Sky.Name, Tilemaps.Level.Tilesets.Sky.Key);
         map.addTilesetImage(Tilemaps.Level.Tilesets.Spritesheet.Name, Tilemaps.Level.Tilesets.Spritesheet.Key);
@@ -30,17 +30,17 @@ export class PlayState extends Phaser.State {
         map.setCollision([13], true, this.waterLayer);
         map.setCollision([9, 10, 11, 12], true, this.wallsLayer);
 
-        this.player = this.game.add.sprite(40, 190, Images.Player.Key, 1);
+        this.player = this.add.sprite(40, 190, Images.Player.Key, 1);
         this.player.animations.add(this.animations.WalkLeft, [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], 25, true);
         this.player.animations.add(this.animations.WalkRight, [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], 25, true);
         this.player.anchor.setTo(0.5);
-        this.game.physics.arcade.enable(this.player);
+        this.physics.arcade.enable(this.player);
         this.playerBody = this.player.body;
         this.playerBody.gravity.y = 600;
 
-        this.cursors = this.game.input.keyboard.createCursorKeys();
+        this.cursors = this.input.keyboard.createCursorKeys();
         const captureKeys = [Phaser.Keyboard.UP, Phaser.Keyboard.DOWN, Phaser.Keyboard.LEFT, Phaser.Keyboard.RIGHT];
-        this.game.input.keyboard.addKeyCapture(captureKeys);
+        this.input.keyboard.addKeyCapture(captureKeys);
     }
 
     update(): void {
@@ -51,8 +51,8 @@ export class PlayState extends Phaser.State {
             this.onGameOver();
         }
 
-        this.game.physics.arcade.collide(this.player, this.waterLayer, this.onGameOver, null, this);
-        this.game.physics.arcade.collide(this.player, this.wallsLayer);
+        this.physics.arcade.collide(this.player, this.waterLayer, this.onGameOver, null, this);
+        this.physics.arcade.collide(this.player, this.wallsLayer);
 
         this.setPlayerVelocity();
         this.setPlayerAnimation();
@@ -94,15 +94,14 @@ export class PlayState extends Phaser.State {
             stroke: "#000000",
             strokeThickness: 4,
         };
-        const textLocation = new Phaser.Point(this.game.world.centerX, this.game.world.centerY);
         const textGameOver = "Game Over!\nPress space to return to Menu";
-        const text = this.game.add.text(textLocation.x, textLocation.y, textGameOver, textStyle);
+        const text = this.add.text(this.world.centerX, this.world.centerY, textGameOver, textStyle);
         text.anchor.setTo(0.5);
 
-        this.game.input.keyboard.
+        this.input.keyboard.
             addKey(Phaser.KeyCode.SPACEBAR).
             onDown.
-            addOnce(() => this.game.state.start(MenuState.KEY), this);
+            addOnce(() => this.state.start(MenuState.KEY), this);
     }
 
 }
