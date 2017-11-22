@@ -34,7 +34,7 @@ module.exports = {
                 loader: 'expose-loader?p2'
             },
             {
-                test: /\.(jpg|jpeg|png|mp3|ogg|json)$/,
+                test: /\.(jpg|jpeg|png|mp3|ogg|json|xml)$/,
                 loader: 'file-loader?name=assets/[name].[ext]?[hash]'
             }
         ]
