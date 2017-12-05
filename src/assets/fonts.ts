@@ -1,7 +1,7 @@
 interface IFontAsset {
     Key: string;
     GetTexturePath: () => string;
-    GetAtlasPAth: () => string;
+    GetAtlasPath: () => string;
 }
 
 export class Fonts {
