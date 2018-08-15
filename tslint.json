@@ -10,6 +10,7 @@
             15
         ],
         "member-access": [
+            true,
             "no-public"
         ],
         "object-literal-sort-keys": [
