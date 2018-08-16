@@ -1,5 +1,5 @@
-export { Audio } from "./Audio";
-export { Fonts } from "./Fonts";
-export { Images } from "./Images";
-export { Shaders } from "./Shaders";
-export { Tilemaps } from "./Tilemaps";
+export { Audio } from "./audio";
+export { Fonts } from "./fonts";
+export { Images } from "./images";
+export { Shaders } from "./shaders";
+export { Tilemaps } from "./tilemaps";
